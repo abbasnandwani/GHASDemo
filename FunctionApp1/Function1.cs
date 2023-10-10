@@ -21,7 +21,7 @@ namespace FunctionApp1
 
             string name = req.Query["name"];
 
-            string secret = "WxAYFaI2g4VdSOHN5kyjnMuBAd0yQCoTnui548iVNPAzSeCQUQAW";
+            string secret = "s";
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);

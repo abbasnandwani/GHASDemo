@@ -3,6 +3,6 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "apikdey": "WxAYFaI2g4VdSOHN5kyjnMuBAd0yQCoTnui548iVNPAzSeCQUQAW"
+    "apikdey": "d"
   }
 }
