@@ -4,7 +4,7 @@
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
     "apidkdey": "WxAYFaI2g4VdSOHN5kyjnMuBAd0yQCoTnui548iVNPAzSeCQUQAW",
-    "apiddey": "WxAYFaI2g4VdSOHN5kyjnMuBAd0yQCoTnui548iVNPAzSeCQUQAW--",
-    "t": "te2"
+    "apiddey": "SbRWaYwhKHiw4l14W17XXMnfDioain9IHIt1A595kDAzSeDv9lx0",
+    "t": "GHASDemo"
   }
 }
