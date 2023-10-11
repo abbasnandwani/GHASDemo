@@ -12,6 +12,10 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello, World!");
 
+            // BAD: Password is generated using a cryptographically insecure RNG
+            Random gen = new Random();
+            string password = "mypassword" + gen.Next();
+
             string intput = Console.ReadLine();
 
             TestClass tc=new TestClass();
