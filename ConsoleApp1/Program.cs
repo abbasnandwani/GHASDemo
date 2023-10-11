@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using System.Data;
+using System.Data.SqlClient;
 using System.Net.Http.Headers;
 
 namespace ConsoleApp1
