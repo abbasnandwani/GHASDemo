@@ -1,4 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Data;
 
 namespace ConsoleApp1
 {
@@ -8,11 +10,19 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello, World!");
 
+            string intput = Console.ReadLine();
 
-            string sql = "SELECT * FROM Users WHERE Id = " + args[0];
+            using (var connection = new SqlConnection(""))
+            {
+                string sql = "SELECT UserId, Username, FullName FROM Users WHERE Username= '" 
+                    + intput + "' Order by Fullname";
 
-            SqlCommand sqlCommand = new SqlCommand(sql);
-            sqlCommand.ExecuteNonQuery();
+                var adapter = new SqlDataAdapter(sql, connection);
+                var result = new DataSet();
+                adapter.Fill(result);
+            }
+
+
         }
     }
 }
