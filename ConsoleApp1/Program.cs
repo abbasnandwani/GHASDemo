@@ -19,6 +19,13 @@ namespace ConsoleApp1
             var res = tc.GetUsers(intput);
 
 
+            String numberList = "";
+            for (int i = 0; i <= 100; i++)
+            {
+                numberList += i + " ";
+            }
+            Console.WriteLine(numberList);
+
         }
     }
 
