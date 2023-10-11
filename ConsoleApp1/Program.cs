@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using System.Data;
+using System.Net.Http.Headers;
 
 namespace ConsoleApp1
 {
@@ -12,17 +13,31 @@ namespace ConsoleApp1
 
             string intput = Console.ReadLine();
 
-            using (var connection = new SqlConnection(""))
+            TestClass tc=new TestClass();
+
+            var res = tc.GetUsers(intput);
+
+
+        }
+    }
+
+    public class TestClass
+    {
+        string connstr = "";
+
+        public DataSet GetUsers(string username)
+        {
+            using (var connection = new SqlConnection(connstr))
             {
-                string sql = "SELECT UserId, Username, FullName FROM Users WHERE Username= '" 
-                    + intput + "' Order by Fullname";
+                string sql = "SELECT UserId, Username, FullName FROM Users WHERE Username= '"
+                    + username + "' Order by Fullname";
 
                 var adapter = new SqlDataAdapter(sql, connection);
                 var result = new DataSet();
                 adapter.Fill(result);
+
+                return result;
             }
-
-
         }
     }
 }
